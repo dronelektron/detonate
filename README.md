@@ -1,6 +1,6 @@
 # Detonate
 
-Detonates a grenade when it collides with a player
+Detonates a grenade when it collides with an enemy
 
 ### Supported Games
 
