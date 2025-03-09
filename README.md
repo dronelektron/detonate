@@ -13,4 +13,4 @@ Detonates a grenade when it collides with a player
 ### Installation
 
 * Download latest [release](https://github.com/dronelektron/detonate/releases)
-* Extract `plugins` folder to `addons/sourcemod` folder of your server
+* Extract `gamedata` and `plugins` folders to `addons/sourcemod` folder of your server

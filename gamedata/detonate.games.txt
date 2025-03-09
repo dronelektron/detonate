@@ -1,0 +1,15 @@
+"Games"
+{
+    "dod"
+    {
+        "Offsets"
+        {
+            "CBaseGrenade::Detonate"
+            {
+                "library"   "server"
+                "windows"   "232"
+                "linux"     "233"
+            }
+        }
+    }
+}
