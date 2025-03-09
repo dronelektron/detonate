@@ -16,7 +16,7 @@ public Plugin myinfo = {
     name = "Detonate",
     author = "Dron-elektron",
     description = "Detonates a grenade when it collides with an enemy",
-    version = "0.1.0",
+    version = "0.1.1",
     url = "https://github.com/dronelektron/detonate"
 };
 
