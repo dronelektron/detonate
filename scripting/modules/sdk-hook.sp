@@ -14,7 +14,7 @@ static void OnTouchPost(int entity, int other) {
         return;
     }
 
-    if (UseCase_IsClient(other) && UseCase_IsEnemy(owner, other)) {
+    if (UseCase_IsClient(owner) && UseCase_IsClient(other) && UseCase_IsEnemy(owner, other)) {
         SdkCall_Detonate(entity);
     }
 }
