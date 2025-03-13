@@ -11,8 +11,12 @@ bool UseCase_IsClient(int entity) {
 }
 
 bool UseCase_IsEnemy(int client, int target) {
-    int clientTeam = GetClientTeam(client);
-    int targetTeam = GetClientTeam(target);
+    if (UseCase_IsClient(client) && UseCase_IsClient(target)) {
+        int clientTeam = GetClientTeam(client);
+        int targetTeam = GetClientTeam(target);
 
-    return clientTeam != targetTeam;
+        return clientTeam != targetTeam;
+    }
+
+    return false;
 }

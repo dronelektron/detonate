@@ -20,7 +20,7 @@ static void OnSpawnPost(int entity) {
 static void OnTouchPost(int entity, int other) {
     int owner = Entity_GetOwner(entity);
 
-    if (UseCase_IsClient(owner) && UseCase_IsClient(other) && UseCase_IsEnemy(owner, other)) {
+    if (UseCase_IsEnemy(owner, other)) {
         SdkCall_Detonate(entity);
     }
 }
