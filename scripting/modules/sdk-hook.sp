@@ -3,7 +3,7 @@ void SdkHook_TakeDamagePost(int client) {
 }
 
 static void OnTakeDamagePost(int victim, int attacker, int inflictor, float damage, int damageType) {
-    if (UseCase_IsGrenade(inflictor) && UseCase_IsEnemy(attacker, victim)) {
+    if (UseCase_IsCrushDamage(damageType) && UseCase_IsEnemy(attacker, victim)) {
         Frame_Detonate(inflictor);
     }
 }
@@ -20,7 +20,7 @@ static void OnSpawnPost(int entity) {
 static void OnTouchPost(int entity, int other) {
     int owner = Entity_GetOwner(entity);
 
-    if (UseCase_IsClient(owner) && UseCase_IsClient(other) && UseCase_IsEnemy(owner, other)) {
+    if (UseCase_IsEnemy(owner, other)) {
         SdkCall_Detonate(entity);
     }
 }
