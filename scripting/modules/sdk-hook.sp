@@ -3,7 +3,7 @@ void SdkHook_TakeDamagePost(int client) {
 }
 
 static void OnTakeDamagePost(int victim, int attacker, int inflictor, float damage, int damageType) {
-    if (UseCase_IsGrenade(inflictor) && UseCase_IsEnemy(attacker, victim)) {
+    if (UseCase_IsCrushDamage(damageType) && UseCase_IsEnemy(attacker, victim)) {
         Frame_Detonate(inflictor);
     }
 }

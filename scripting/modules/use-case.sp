@@ -1,9 +1,5 @@
-bool UseCase_IsGrenade(int entity) {
-    char className[CLASS_NAME_SIZE];
-
-    GetEntityClassname(entity, className, sizeof(className));
-
-    return EntityFilter_IsGrenade(className);
+bool UseCase_IsCrushDamage(int damageType) {
+    return (damageType & DMG_CRUSH) == DMG_CRUSH;
 }
 
 bool UseCase_IsClient(int entity) {
